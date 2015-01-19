@@ -49,7 +49,8 @@ def largest_prod_grid(array,length):
 		print "\n\n\tMax sum of %d consecutive number in reverse_array horizontally = %d" %(length, max_seq)
 
 
-
+		for a in range(0,length):
+			
 
 	except Exception:
 		print "Exception occured"
