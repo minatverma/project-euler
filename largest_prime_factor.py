@@ -12,7 +12,7 @@ def larget_prime_factor(number):
 	start = timeit.default_timer()
 	factor_list = list()
 	div = 2
-	while div < number :
+	while div**2 < number :
 		if number % div == 0:
 			number = number / div
 			if div not in factor_list:

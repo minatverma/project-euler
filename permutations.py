@@ -1,5 +1,5 @@
 #coding=utf-8
-
+#kernprof -l -v fib.py
 
 import os
 import sys
@@ -9,11 +9,13 @@ import math
 
 def permutation(series, number):
 	permutation_generator = permutations(series,r=number)
+	a = list(map("".join,permutation_generator))
+	print 'Max index for of the array for given rank' , len(a)
 	print "Enter index of permutation you want"
 	index = int(raw_input())
-	print list(map("".join,permutation_generator))[index]
+	print a[index]
 
-
+@profile
 def make_series(array):
 	series = list()
 	for a in array:

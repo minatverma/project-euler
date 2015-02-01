@@ -5,11 +5,15 @@
 # 9009 = 91 × 99.
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
+
+# python -m memory_profiler largest_palindrome_product.py
+
 import os
 import sys
 import math
 import timeit
 
+@profile
 def largest_palindrome(length):
 	if length == 2 :
 		max = 99 

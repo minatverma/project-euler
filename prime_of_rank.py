@@ -2,12 +2,15 @@
 # By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
 # What is the 10001st prime number?
 
+# time profile  : kernprof -l -v prime_of_rank.py
+# memory profile: python -m memory_profiler prime_of_rank.py
+
 import os
 import sys
 import math
 from time import time
 
-
+@profile
 def prime_of_rank(rank) :
 	current = 0
 	number = 2
@@ -27,7 +30,7 @@ def check_prime(number) :
 	if number == 2 or number == 3:
 		return True
 	if number > 3 :
-		for i in range (2 ,number,1):
+		for i in xrange (2 ,int(number ** 0.5)+1,1):
 			if number % i == 0:
 				return False
 	return True
