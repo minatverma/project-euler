@@ -16,7 +16,7 @@ def prime_of_rank(rank) :
 	number = 2
 	start = time()
 	while current < rank :
-		if check_prime(number):
+		if is_prime(number):
 			current = current + 1
 		if current == rank :
 			break
@@ -24,7 +24,7 @@ def prime_of_rank(rank) :
 	print number
 	print "time taken in seconds", time() - start 
 
-def check_prime(number) :
+def is_prime(number) :
 	if number < 2:
 		print "Not applicable to this number"
 	if number == 2 or number == 3:
